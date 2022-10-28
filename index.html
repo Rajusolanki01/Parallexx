@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.png">
+    <title>Parallex Srolling Website | vanilla JavaScript</title>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Parallex</a>
+        <ul>
+            <li><a href="#" class="Active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="work.html" target="_blank">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+    <img src="images/stars.png" id="Stars">
+    <img src="images/moon.png" id="moon">
+    <img src="images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text"> Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="images/mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+    <h2>Parallex Scrolling Effect</h2>
+    <p>Meanwhile, the meaning of design depends on the context and can also mean a variety of other things. Design is the creation of an experience. It’s also the process of the said creation and how well it’s organized. On top of that, design is the result, i.e. the things we see, hear, and feel.
+The meaning of design is so multifaceted, to the point that you can no longer say if a universal definition is at all possible. You can, however, try to look at the sum of the parts to come up with a more realistic picture. So, Charles Eames said that design is all about purpose. Let’s dive deeper into this idea. </p>
+<br><br>
+<h2>Creation</h2>
+<p>The importance of the truth about creation comes from its being the foundation of God’s saving plans culminating in Christ. Both the Bible and the Creed begin with a confession of faith in God the Creator</p>
+<br><br>
+<h2>Development</h2>
+<p>A grateful heart is a beginning of greatness. It is an expression of humility. It is a foundation for the development of such virtues as prayer, faith, courage, contentment, happiness, love, and well-being.
+    Read more at https://www.brainyquote.com/topics/development-quotes</p>
+</div>
+<script>
+    let Stars = document.getElementById('Stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        Stars.style.left = value + 0.25 + 'px';
+        moon.style.top = value + 1.05 + 'px';
+        mountains_behind.style.top = value + 0.5 + 'px';
+        text.style.marginRight = value + 4 + 'px';
+    })
+</script>
+</body>
+</html>
